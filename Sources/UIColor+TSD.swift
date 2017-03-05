@@ -40,8 +40,8 @@ extension UIColor {
   ///   - hexStr: the hex string (e.g. #FF00AA)
   ///   - alpha: the alpha value in [0..1] where `1` fully opaque and `0` is transparent
   /// - Returns: returns the color
-  static func hexStr(_ hexStr: String, alpha: CGFloat) throws -> UIColor {
-    var hexStr = hexStr
+  static func hexString(_ hexString: String, alpha: CGFloat) throws -> UIColor {
+    var hexStr = hexString
     let a: Float = Float(alpha)
     hexStr = hexStr.replacingOccurrences(of: "#", with: "")
     let scanner = Scanner(string: hexStr as String)
@@ -54,5 +54,15 @@ extension UIColor {
     let g = Float((color & 0x00FF00) >> 8)
     let b = Float(color & 0x0000FF)
     return UIColor(r: r, g: g, b: b, a: a)
+  }
+
+  /// A static function that return a `UIColor` object given an hexadecimal string
+  /// representation of the color
+  ///
+  /// - Parameters:
+  ///   - hexStr: the hex string (e.g. #FF00AA)
+  /// - Returns: returns the color
+  static func hexStr(_ hexString: String) throws -> UIColor {
+    return try UIColor.hexString(hexString, alpha: 1.0)
   }
 }
