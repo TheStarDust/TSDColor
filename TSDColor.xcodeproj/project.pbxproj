@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F586550B1E6C7434009B4AF7 /* UIColor+TSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586550A1E6C7434009B4AF7 /* UIColor+TSD.swift */; };
+		F586550D1E6C7580009B4AF7 /* TSDColorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586550C1E6C7580009B4AF7 /* TSDColorError.swift */; };
 		OBJ_21 /* TSDColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* TSDColor.swift */; };
 		OBJ_28 /* TSDColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* TSDColorTests.swift */; };
 		OBJ_30 /* TSDColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* TSDColor.framework */; };
@@ -23,6 +25,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F586550A1E6C7434009B4AF7 /* UIColor+TSD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+TSD.swift"; sourceTree = "<group>"; };
+		F586550C1E6C7580009B4AF7 /* TSDColorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSDColorError.swift; sourceTree = "<group>"; };
 		OBJ_12 /* TSDColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDColorTests.swift; sourceTree = "<group>"; };
 		OBJ_14 /* TSDColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TSDColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_15 /* TSDColorTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = TSDColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* TSDColor.swift */,
+				F586550A1E6C7434009B4AF7 /* UIColor+TSD.swift */,
+				F586550C1E6C7580009B4AF7 /* TSDColorError.swift */,
 			);
 			name = TSDColor;
 			path = Sources;
@@ -170,7 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				F586550D1E6C7580009B4AF7 /* TSDColorError.swift in Sources */,
 				OBJ_21 /* TSDColor.swift in Sources */,
+				F586550B1E6C7434009B4AF7 /* UIColor+TSD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
