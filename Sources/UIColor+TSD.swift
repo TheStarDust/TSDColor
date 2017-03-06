@@ -16,7 +16,7 @@ extension UIColor {
   ///   - r: the red component of the color r in [0..255]
   ///   - g: the green component of the color g in [0..255]
   ///   - b: the blue component of the color b in [0..255]
-  convenience init(r: Float, g: Float, b: Float) {
+  public convenience init(r: Float, g: Float, b: Float) {
     self.init(colorLiteralRed: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1.0)
   }
 
@@ -28,7 +28,7 @@ extension UIColor {
   ///   - g: the green component of the color g in [0..255]
   ///   - b: the blue component of the color b in [0..255]
   ///   - a: the alpha component of the color b in [0..1]
-  convenience init(r: Float, g: Float, b: Float, a: Float) {
+  public convenience init(r: Float, g: Float, b: Float, a: Float) {
     self.init(colorLiteralRed: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
   }
 
@@ -40,7 +40,7 @@ extension UIColor {
   ///   - hexStr: the hex string (e.g. #FF00AA)
   ///   - alpha: the alpha value in [0..1] where `1` fully opaque and `0` is transparent
   /// - Returns: returns the color
-  static func hexString(_ hexString: String, alpha: CGFloat) throws -> UIColor {
+  open static func hexString(_ hexString: String, alpha: CGFloat) throws -> UIColor {
     var hexStr = hexString
     let a: Float = Float(alpha)
     hexStr = hexStr.replacingOccurrences(of: "#", with: "")
@@ -62,7 +62,7 @@ extension UIColor {
   /// - Parameters:
   ///   - hexStr: the hex string (e.g. #FF00AA)
   /// - Returns: returns the color
-  static func hexStr(_ hexString: String) throws -> UIColor {
+  open static func hexStr(_ hexString: String) throws -> UIColor {
     return try UIColor.hexString(hexString, alpha: 1.0)
   }
 }
