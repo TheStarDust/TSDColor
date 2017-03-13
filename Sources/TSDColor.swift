@@ -3,9 +3,9 @@ import UIKit
 
 /// A color representation useful for simple gradients
 public struct TSDGradientColor {
-  var startColor: UIColor
-  var endColor: UIColor
-  var name: String
+  public private(set) var startColor: UIColor
+  public private(set) var endColor: UIColor
+  public private(set) var name: String
 
   public init(startColor: UIColor, endColor: UIColor, name: String) {
     self.startColor = startColor
