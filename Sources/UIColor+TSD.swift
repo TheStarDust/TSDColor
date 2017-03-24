@@ -65,4 +65,24 @@ extension UIColor {
   open static func hexStr(_ hexString: String) throws -> UIColor {
     return try UIColor.hexString(hexString, alpha: 1.0)
   }
+
+  /// Reduces the brightness of the current color bt the amount of reduction that is given by parameter
+  /// By default the reduction coefficient is `0.4`
+  /// - Parameter brightnessReduction: the coefficient to apply to the current color
+  /// - Returns: A darker version of the color
+  open func darkerColor(brightnessReduction: CGFloat = 0.4) -> UIColor {
+    precondition(brightnessReduction >= 0.0 && brightnessReduction <= 1.0, "The brightness reduction value should be in [0..1]")
+    var hue: CGFloat = 0.0
+    var saturation: CGFloat = 0.0
+    var brightness: CGFloat = 0.0
+    var alpha: CGFloat = 0.0
+
+    let success = self.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+
+    if success {
+      return UIColor(hue: hue, saturation: saturation, brightness: brightness*brightnessReduction, alpha: alpha)
+    }
+
+    return self
+  }
 }
